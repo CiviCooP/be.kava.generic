@@ -1,5 +1,5 @@
 Package: be.kava.generic
-Copyright (C) 2015, FIXME <FIXME>
+Copyright (C) 2015, Kevin Levie <kevin.levie@civicoop.org>
 Licensed under the GNU Affero Public License 3.0 (below).
 
 -------------------------------------------------------------------------------

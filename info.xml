@@ -2,7 +2,7 @@
 <extension key="be.kava.generic" type="module">
   <file>kavageneric</file>
   <name>Configuration for KAVA</name>
-  <description>Generic extension with configuration options and custom fields for KAVA</description>
+  <description>Generic extension with custom fields and shared functionality for KAVA</description>
   <license>AGPL-3.0</license>
   <maintainer>
     <author>Kevin Levie</author>

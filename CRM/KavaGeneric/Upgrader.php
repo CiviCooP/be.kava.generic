@@ -1,7 +1,12 @@
 <?php
 
 /**
- * Collection of upgrade steps
+ * Class CRM_KavaGeneric_Upgrader.
+ * Collection of upgrade steps.
+ *
+ * @author Kevin Levie <kevin.levie@civicoop.org>
+ * @package be.kava.generic
+ * @license AGPL-3.0
  */
 class CRM_KavaGeneric_Upgrader extends CRM_KavaGeneric_Upgrader_Base {
 
