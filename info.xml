@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <extension key="be.kava.generic" type="module">
-  <file>generic</file>
+  <file>kavageneric</file>
   <name>Configuration for KAVA</name>
   <description>Generic extension with configuration options and custom fields for KAVA</description>
   <license>AGPL-3.0</license>
@@ -9,13 +9,14 @@
     <email>kevin@levity.nl</email>
   </maintainer>
   <releaseDate>2015-04-15</releaseDate>
-  <version>1.0</version>
+  <version>1.1</version>
   <develStage>alpha</develStage>
   <compatibility>
     <ver>4.6</ver>
+    <ver>4.7</ver>
   </compatibility>
   <comments></comments>
   <civix>
-    <namespace>CRM/Generic</namespace>
+    <namespace>CRM/KavaGeneric</namespace>
   </civix>
 </extension>

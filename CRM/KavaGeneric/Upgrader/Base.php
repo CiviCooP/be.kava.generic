@@ -5,7 +5,7 @@
 /**
  * Base class which provides helpers to execute upgrade logic
  */
-class CRM_Generic_Upgrader_Base {
+class CRM_KavaGeneric_Upgrader_Base {
 
   /**
    * @var varies, subclass of ttis
@@ -38,7 +38,7 @@ class CRM_Generic_Upgrader_Base {
   static public function instance() {
     if (! self::$instance) {
       // FIXME auto-generate
-      self::$instance = new CRM_Generic_Upgrader(
+      self::$instance = new CRM_KavaGeneric_Upgrader(
         'be.kava.generic',
         realpath(__DIR__ .'/../../../')
       );
@@ -53,7 +53,7 @@ class CRM_Generic_Upgrader_Base {
    * task-context; otherwise, this will be non-reentrant.
    *
    * @code
-   * CRM_Generic_Upgrader_Base::_queueAdapter($ctx, 'methodName', 'arg1', 'arg2');
+   * CRM_KavaGeneric_Upgrader_Base::_queueAdapter($ctx, 'methodName', 'arg1', 'arg2');
    * @endcode
    */
   static public function _queueAdapter() {
@@ -126,7 +126,7 @@ class CRM_Generic_Upgrader_Base {
   }
 
   /**
-   * Syntatic sugar for enqueuing a task which calls a function in this class. 
+   * Syntatic sugar for enqueuing a task which calls a function in this class.
    *
    * The task is weighted so that it is processed
    * as part of the currently-pending revision.

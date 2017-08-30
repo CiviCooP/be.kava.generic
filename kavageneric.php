@@ -1,6 +1,6 @@
 <?php
 
-require_once 'generic.civix.php';
+require_once 'kavageneric.civix.php';
 
 /**
  * Hier voegen we een aantal contacttypes e.d. toe.
@@ -11,21 +11,21 @@ require_once 'generic.civix.php';
  * Implements hook_civicrm_enable().
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_enable
  */
-function generic_civicrm_enable() {
+function kavageneric_civicrm_enable() {
 
-    _generic_add_contact_type('Apotheker', 1);
-    _generic_add_contact_type('Apotheekassistent', 1);
-    _generic_add_contact_type('Zorgverlener', 1);
+    _kavageneric_add_contact_type('Apotheker', 1);
+    _kavageneric_add_contact_type('Apotheekassistent', 1);
+    _kavageneric_add_contact_type('Zorgverlener', 1);
 
-    _generic_add_contact_type('Bedrijf', 3);
-    _generic_add_contact_type('Apotheekuitbating', 3);
-    _generic_add_contact_type('Apotheeklocatie', 3);
-    _generic_add_contact_type('Tariferingsdienst KAVA', 3);
-    _generic_add_contact_type('Beroepsvereniging', 3);
-    _generic_add_contact_type('Onderwijsinstelling', 3);
-    _generic_add_contact_type('Bedrijfsonderdeel', 3);
+    _kavageneric_add_contact_type('Bedrijf', 3);
+    _kavageneric_add_contact_type('Apotheekuitbating', 3);
+    _kavageneric_add_contact_type('Apotheeklocatie', 3);
+    _kavageneric_add_contact_type('Tariferingsdienst KAVA', 3);
+    _kavageneric_add_contact_type('Beroepsvereniging', 3);
+    _kavageneric_add_contact_type('Onderwijsinstelling', 3);
+    _kavageneric_add_contact_type('Bedrijfsonderdeel', 3);
 
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_titularis_a',
         'name_b_a'       => 'kavarel_titularis_b',
         'label_a_b'      => 'Titularis van',
@@ -33,7 +33,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_cotitularis_a',
         'name_b_a'       => 'kavarel_cotitularis_b',
         'label_a_b'      => 'Co-titularis van',
@@ -41,7 +41,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_directeur_a',
         'name_b_a'       => 'kavarel_directeur_b',
         'label_a_b'      => 'Directeur van',
@@ -49,7 +49,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_eigenaar_a',
         'name_b_a'       => 'kavarel_eigenaar_b',
         'label_a_b'      => 'Eigenaar van',
@@ -57,7 +57,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_medeeigenaar_a',
         'name_b_a'       => 'kavarel_medeeigenaar_b',
         'label_a_b'      => 'Mede-eigenaar van',
@@ -65,7 +65,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_tariferingsdienst_a',
         'name_b_a'       => 'kavarel_tariferingsdienst_b',
         'label_a_b'      => 'Tariferingsdienst van',
@@ -73,7 +73,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'organization',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_student_a',
         'name_b_a'       => 'kavarel_student_b',
         'label_a_b'      => 'Studeert/heeft gestudeerd bij',
@@ -81,7 +81,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_lid1jrafg_a',
         'name_b_a'       => 'kavarel_lid1jrafg_b',
         'label_a_b'      => '1 jaar afgestudeerd lid van',
@@ -89,7 +89,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_lidafg_a',
         'name_b_a'       => 'kavarel_lidafg_b',
         'label_a_b'      => 'Afgestudeerd lid van',
@@ -97,7 +97,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_corrlid_a',
         'name_b_a'       => 'kavarel_corrlid_b',
         'label_a_b'      => 'Corresponderend lid van',
@@ -105,7 +105,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_meewlid_a',
         'name_b_a'       => 'kavarel_meewlid_b',
         'label_a_b'      => 'Meewerkend lid van',
@@ -113,7 +113,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_werkendlid_a',
         'name_b_a'       => 'kavarel_werkendlid_b',
         'label_a_b'      => 'Werkend lid van',
@@ -121,7 +121,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_erelid_a',
         'name_b_a'       => 'kavarel_erelid_b',
         'label_a_b'      => 'Erelid van',
@@ -129,7 +129,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_seniorlid_a',
         'name_b_a'       => 'kavarel_seniorlid_b',
         'label_a_b'      => 'Senior-lid van',
@@ -137,7 +137,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_ongedeflid_a',
         'name_b_a'       => 'kavarel_ongedeflid_a',
         'label_a_b'      => 'Ongedefinieerd lid van',
@@ -145,7 +145,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_lidnkberoepsv_a',
         'name_b_a'       => 'kavarel_lidnkberoepsv_b',
         'label_a_b'      => 'Lid van beroepsvereniging (niet-KAVA)',
@@ -153,7 +153,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_lidnknietstem_a',
         'name_b_a'       => 'kavarel_lidnknietstem_b',
         'label_a_b'      => 'Niet-stemgerechtigd lid van (niet-KAVA)',
@@ -161,7 +161,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_lidnkstem_a',
         'name_b_a'       => 'kavarel_lidnkstem_b',
         'label_a_b'      => 'Stemgerechtigd lid van (niet-KAVA)',
@@ -169,7 +169,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_klant_a',
         'name_b_a'       => 'kavarel_klant_b',
         'label_a_b'      => 'Klant van',
@@ -177,7 +177,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_medewerker_a',
         'name_b_a'       => 'kavarel_medewerker_b',
         'label_a_b'      => 'Medewerker van',
@@ -185,7 +185,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_provisor_a',
         'name_b_a'       => 'kavarel_provisor_b',
         'label_a_b'      => 'Provisor van',
@@ -193,7 +193,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_adjunctapotheker_a',
         'name_b_a'       => 'kavarel_adjunctapotheker_b',
         'label_a_b'      => 'Adjunct-apotheker van',
@@ -201,7 +201,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_plaatsvapotheker_a',
         'name_b_a'       => 'kavarel_plaatsvapotheker_b',
         'label_a_b'      => 'Plaatsvervangend apotheker van',
@@ -209,7 +209,7 @@ function generic_civicrm_enable() {
         'contact_type_a' => 'individual',
         'contact_type_b' => 'organization',
     ));
-    _generic_add_relationship_type(array(
+    _kavageneric_add_relationship_type(array(
         'name_a_b'       => 'kavarel_farmassistent_a',
         'name_b_a'       => 'kavarel_farmassistent_b',
         'label_a_b'      => 'Farmaceutisch-technisch assistent van',
@@ -218,7 +218,7 @@ function generic_civicrm_enable() {
         'contact_type_b' => 'organization',
     ));
 
-    _generic_civix_civicrm_enable();
+    _kavageneric_civix_civicrm_enable();
 }
 
 /**
@@ -227,7 +227,7 @@ function generic_civicrm_enable() {
  * @param int $parent_id Parent ID (1 = Individual, 2 = Household, 3 = Organization)
  * @return bool Success
  */
-function _generic_add_contact_type($label, $parent_id = 1) {
+function _kavageneric_add_contact_type($label, $parent_id = 1) {
 
     $name = strtolower(preg_replace('/[^a-zA-Z0-9]/', '_', $label));
 
@@ -244,57 +244,41 @@ function _generic_add_contact_type($label, $parent_id = 1) {
     }
 }
 
-/**
- * Adds a relationship type
- * @param array $params API Parameters
- * @return bool Success
- */
-function _generic_add_relationship_type($params = array()) {
-
-    try {
-        $rtCheck = civicrm_api3('RelationshipType', 'getsingle', array('name_a_b' => $params['name_a_b']));
-        return !$rtCheck['is_error'];
-    } catch (\CiviCRM_API3_Exception $e) {
-        $rtAdd = civicrm_api3('RelationshipType', 'create', $params);
-        return !$rtAdd['is_error'];
-    }
-}
-
 
 /** Default Civix hooks follow **/
 
-function generic_civicrm_install() {
-    _generic_civix_civicrm_install();
+function kavageneric_civicrm_install() {
+    _kavageneric_civix_civicrm_install();
 }
 
-function generic_civicrm_uninstall() {
-    _generic_civix_civicrm_uninstall();
+function kavageneric_civicrm_uninstall() {
+    _kavageneric_civix_civicrm_uninstall();
 }
 
-function generic_civicrm_config(&$config) {
-    _generic_civix_civicrm_config($config);
+function kavageneric_civicrm_config(&$config) {
+    _kavageneric_civix_civicrm_config($config);
 }
 
-function generic_civicrm_xmlMenu(&$files) {
-    _generic_civix_civicrm_xmlMenu($files);
+function kavageneric_civicrm_xmlMenu(&$files) {
+    _kavageneric_civix_civicrm_xmlMenu($files);
 }
 
-function generic_civicrm_disable() {
-    return _generic_civix_civicrm_disable();
+function kavageneric_civicrm_disable() {
+    return _kavageneric_civix_civicrm_disable();
 }
 
-function generic_civicrm_upgrade($op, CRM_Queue_Queue $queue = null) {
-    return _generic_civix_civicrm_upgrade($op, $queue);
+function kavageneric_civicrm_upgrade($op, CRM_Queue_Queue $queue = null) {
+    return _kavageneric_civix_civicrm_upgrade($op, $queue);
 }
 
-function generic_civicrm_managed(&$entities) {
-    _generic_civix_civicrm_managed($entities);
+function kavageneric_civicrm_managed(&$entities) {
+    _kavageneric_civix_civicrm_managed($entities);
 }
 
-function generic_civicrm_caseTypes(&$caseTypes) {
-    _generic_civix_civicrm_caseTypes($caseTypes);
+function kavageneric_civicrm_caseTypes(&$caseTypes) {
+    _kavageneric_civix_civicrm_caseTypes($caseTypes);
 }
 
-function generic_civicrm_alterSettingsFolders(&$metaDataFolders = null) {
-    _generic_civix_civicrm_alterSettingsFolders($metaDataFolders);
+function kavageneric_civicrm_alterSettingsFolders(&$metaDataFolders = null) {
+    _kavageneric_civix_civicrm_alterSettingsFolders($metaDataFolders);
 }
