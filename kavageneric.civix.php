@@ -11,7 +11,7 @@ function _kavageneric_civix_civicrm_config(&$config = NULL) {
   static $configured = FALSE;
   if ($configured) {
     return;
-  }  
+  }
   $configured = TRUE;
 
   $template =& CRM_Core_Smarty::singleton();
@@ -20,10 +20,10 @@ function _kavageneric_civix_civicrm_config(&$config = NULL) {
   $extDir = $extRoot . 'templates';
 
   if ( is_array( $template->template_dir ) ) {
-      array_unshift( $template->template_dir, $extDir );
-  } 
+    array_unshift( $template->template_dir, $extDir );
+  }
   else {
-      $template->template_dir = array( $extDir, $template->template_dir );
+    $template->template_dir = array( $extDir, $template->template_dir );
   }
 
   $include_path = $extRoot . PATH_SEPARATOR . get_include_path( );
@@ -114,12 +114,12 @@ function _kavageneric_civix_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) 
 }
 
 /**
- * @return CRM_KavaGeneric_Upgrader
+ * @return CRM_Kavageneric_Upgrader
  */
 function _kavageneric_civix_upgrader() {
-  if (!file_exists(__DIR__.'/CRM/Generic/Upgrader.php')) {
+  if (!file_exists(__DIR__.'/CRM/KavaGeneric/Upgrader.php')) {
     return NULL;
-  } 
+  }
   else {
     return CRM_KavaGeneric_Upgrader_Base::instance();
   }
@@ -252,7 +252,7 @@ function _kavageneric_civix_insert_navigation_menu(&$menu, $path, $item, $parent
       ))
     );
     return true;
-  } 
+  }
   else {
     // Find an recurse into the next level down
     $found = false;

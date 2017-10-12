@@ -40,7 +40,7 @@ class CRM_KavaGeneric_Upgrader_Base {
       // FIXME auto-generate
       self::$instance = new CRM_KavaGeneric_Upgrader(
         'be.kava.generic',
-        realpath(__DIR__ .'/../../../')
+        realpath(__DIR__ . '/../../be.kava.generic/')
       );
     }
     return self::$instance;
