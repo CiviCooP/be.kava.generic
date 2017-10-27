@@ -114,7 +114,7 @@ function _kavageneric_civix_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) 
 }
 
 /**
- * @return CRM_Kavageneric_Upgrader
+ * @return CRM_KavaGeneric_Upgrader
  */
 function _kavageneric_civix_upgrader() {
   if (!file_exists(__DIR__.'/CRM/KavaGeneric/Upgrader.php')) {

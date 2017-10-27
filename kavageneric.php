@@ -10,6 +10,8 @@ require_once 'kavageneric.civix.php';
  */
 function kavageneric_civicrm_install() {
 
+  require __DIR__ . '/CRM/KavaGeneric/Installer.php';
+
   $installer = CRM_KavaGeneric_Installer::singleton();
   $installer->run();
 
