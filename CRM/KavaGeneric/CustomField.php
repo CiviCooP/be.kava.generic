@@ -31,6 +31,11 @@ class CRM_KavaGeneric_CustomField {
   private $optionGroupCache = [];
 
   /**
+   * @var array $relationshipTypeCache
+   */
+  private $relationshipTypeCache = [];
+
+  /**
    * Get instance.
    * @return static
    */
@@ -183,6 +188,18 @@ class CRM_KavaGeneric_CustomField {
       $this->optionGroupCache[$ogName] = civicrm_api3('OptionGroup', 'getsingle', ['name' => $ogName]);
     }
     return $this->optionGroupCache[$ogName];
+  }
+
+  /**
+   * Returns a relationship type by A-B name.
+   * @param string $abName Relationship type A-B name
+   * @return array|mixed Relationship type
+   */
+  public function getRelationshipTypeByAbName($abName) {
+    if(!array_key_exists($abName, $this->relationshipTypeCache)) {
+      $this->relationshipTypeCache[$abName] = civicrm_api3('RelationshipType', 'getsingle', ['name_a_b' => $abName]);
+    }
+    return $this->relationshipTypeCache[$abName];
   }
 
 }
