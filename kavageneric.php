@@ -18,6 +18,17 @@ function kavageneric_civicrm_install() {
   _kavageneric_civix_civicrm_install();
 }
 
+/**
+ * Implements hook_civicrm_coreResourceList.
+ * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_coreResourceList
+ *
+ * Add custom JS.
+ */
+function kavageneric_civicrm_coreResourceList(&$list, $region) {
+  $res = CRM_Core_Resources::singleton();
+  $res->addScriptFile('be.kava.generic', 'js/validation.js', 1012, 'html-header', FALSE);
+}
+
 /** Default Civix hooks follow **/
 
 function kavageneric_civicrm_enable() {
