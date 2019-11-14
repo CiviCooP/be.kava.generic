@@ -8,7 +8,13 @@ CRM.$(function ($) {
                 if (value.length === 0) {
                     return true;
                 }
-                return value.match(/^(BE[0-9]{10})$/i);
+
+                var matches = value.match(/^BE([0-9]{8})([0-9]{2})$/i);
+                if (matches === null || matches.length === 0) {
+                    return false;
+                }
+
+                return (97 - parseInt(matches[1]) % 97 === parseInt(matches[2]));
             },
             "Voer een geldig BTW-nummer in."
         );
@@ -35,6 +41,4 @@ CRM.$(function ($) {
             initKavaFormValidation();
         }
     });
-    initKavaFormValidation();
-
 });
