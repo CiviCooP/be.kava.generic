@@ -32,6 +32,10 @@ function kavageneric_civicrm_buildForm($formName, &$form) {
     $res = CRM_Core_Resources::singleton();
     $res->addScriptFile('be.kava.generic', 'js/validation.js', 1012, 'html-header', FALSE);
   }
+  elseif ($formName == 'CRM_Activity_Form_Activity' || $formName == 'CRM_Case_Form_Activity') {
+    $defaults['priority_id'] = 2;
+    $form->setDefaults($defaults);
+  }
 }
 
 function kavageneric_civicrm_validateForm($formName, &$fields, &$files, &$form, &$errors) {
